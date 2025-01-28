@@ -119,7 +119,6 @@ footer{
 
 footer ul {
     list-style: none;
-    justify-content: center;
 }
 
 footer ul li{
@@ -132,5 +131,5 @@ footer ul li a{
 }
 
 .footer-grid{
-    text-align: center;
+    text-align: start;
 }
