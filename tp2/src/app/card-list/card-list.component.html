@@ -1,1 +1,21 @@
-<p>card-list works!</p>
+<section class="py-10 bg-gray-100">
+  <div class="container mx-auto text-center">
+      <div class="section-header">
+          <h2>Our Services</h2>
+          <p>
+              We provide you the best choices for you. Adjust it to your health needs and make sure your undergo 
+              treatment with our highly qualified doctors. You can consult with us which type of service is suitable for your health.
+          </p>
+      </div>
+  </div>
+  
+  <div class="grid container mx-auto px-6">
+      @for (card of cards; track card) {
+          <app-card class="app-card"
+            [title]="card.title" 
+            [description]="card.description" 
+            [imageUrl]="card.imageUrl">
+          </app-card>
+      }
+  </div>
+</section>
