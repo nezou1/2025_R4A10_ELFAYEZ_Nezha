@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
+  title : string = "titre";
+  description : string = "description";
   
 }
