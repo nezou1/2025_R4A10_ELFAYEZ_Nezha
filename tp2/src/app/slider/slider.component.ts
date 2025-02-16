@@ -15,7 +15,7 @@ export class SliderComponent {
       quote: 'Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedious form, long calls, or administrative hassle) and securely.'
     },
     {
-      img: 'user2.jpg',
+      img: '/assets/user2.jpg',
       name: 'Jane Doe',
       title: 'CEO, TechCorp',
       quote: 'This platform has transformed the way we interact with our customers, making everything seamless and efficient.'
