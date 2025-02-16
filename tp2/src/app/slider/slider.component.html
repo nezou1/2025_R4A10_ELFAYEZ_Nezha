@@ -1,0 +1,35 @@
+<div class="testimonial-slider">
+    <h2>What our customer are saying</h2>
+    
+    <div class="slider-container">
+        <h1> What our customer are saying </h1>
+        <hr style="width: 50px; color: white;">
+        @for (testimonial of testimonials; track testimonial; let i = $index) {
+            @if (i === currentIndex) {
+                <div class="testimonial-card">
+                    <img [src]="testimonial.img" [alt]="testimonial.name">
+                    <div class="testimonial-content">
+                        <div style="width:50%">
+                            <h3>{{ testimonial.name }}</h3>
+                            <p>{{ testimonial.title }}</p>
+                        </div>
+                  
+                        <blockquote>
+                            "{{ testimonial.quote }}"
+                        </blockquote>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+    
+    <div class="slider-controls">
+        <button (click)="prev()">&#8592;</button>
+        <div class="dots">
+            @for (testimonial of testimonials; track testimonial; let i = $index) {
+                <span class="dot" [class.active]="i === currentIndex" (click)="selectSlide(i)"></span>
+            }
+        </div>
+        <button (click)="next()">&#8594;</button>
+    </div>
+</div>

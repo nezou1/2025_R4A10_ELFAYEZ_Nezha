@@ -4,10 +4,11 @@ import { HeaderComponent } from "./header/header.component";
 import { Section1Component } from "./section1/section1.component";
 import { CardComponent } from "./card/card.component";
 import { CardListComponent } from "./card-list/card-list.component";
+import { SliderComponent } from "./slider/slider.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, Section1Component, CardComponent, CardListComponent],
+  imports: [RouterOutlet, HeaderComponent, Section1Component, CardComponent, CardListComponent, SliderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
