@@ -3,7 +3,7 @@
 }
 
 
-.voyagecard {
+.card {
   width: 300px;
   background: white;
   border-radius: 12px;
@@ -16,18 +16,18 @@
   height: 100%;
 }
 
-.voyagecard:hover {
+.card:hover {
   transform: translateY(-5px);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
 }
 
-.voyagecardinfo h1 {
+.info h1 {
   font-size: 20px;
   color: #333;
   margin-bottom: 8px;
 }
 
-.voyagecardinfo p {
+.info p {
   font-size: 16px;
   color: #555;
   margin: 5px 0;

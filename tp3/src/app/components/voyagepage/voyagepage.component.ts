@@ -33,21 +33,6 @@ export class VoyagepageComponent implements OnInit {
     });
   }
 
-  openModal() {
-    this.isModalOpen = true;
-  }
-
-  closeModal() {
-    this.isModalOpen = false;
-  }
-
-  confirmSuprimmer() {
-    this.voyageservice.suprimmerVoyage(this.id);
-    this.router.navigate(['voyages']).then(() => {
-      this.closeModal();
-    });
-  }
-
   retour() {
     this.router.navigate(['voyages']);
   }

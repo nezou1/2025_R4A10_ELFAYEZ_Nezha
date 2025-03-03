@@ -10,19 +10,8 @@
       <p>{{description}}</p>
     </div>
     <div class="actions">
-      <button (click)="openModal()" class="bluebutton">Supprimer</button>
+      <button  class="bluebutton">Supprimer</button>
       <button (click)="retour()" class="pinkbutton">Retour</button>
-    </div>
-  </div>
-</div>
-
-<div class="modal" [class.show]="isModalOpen" (click)="closeModal()">
-  <div class="modal-content" (click)="$event.stopPropagation()">
-    <h2>Confirmer la suppression</h2>
-    <p>Êtes-vous sûr de vouloir supprimer ce voyage ?</p>
-    <div class="modal-actions">
-      <button (click)="confirmSuprimmer()" class="bluebutton">Oui, supprimer</button>
-      <button (click)="closeModal()" class="redbutton">Annuler</button>
     </div>
   </div>
 </div>

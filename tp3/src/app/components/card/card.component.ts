@@ -13,22 +13,7 @@ export class CardComponent {
   @Input() description!: string;
   @Input() prix!: number;
   @Input({transform: numberAttribute}) id!: number;
-  @Output() suprimmer = new EventEmitter<number>();
-
-  isModalOpen = false;
-
-  openModal() {
-    this.isModalOpen = true;
-  }
-
-  closeModal() {
-    this.isModalOpen = false;
-  }
-
-  confirmSuprimmer() {
-    this.suprimmer.emit(this.id);
-    this.closeModal();
-  }
+ 
 
   
 }
