@@ -1,0 +1,22 @@
+<div class="voyagecard">
+  <div class="voyagecardinfo">
+    <h1 class="destination">Destination : {{destination}}</h1>
+    <p class="description">Description : {{description}}</p>
+    <p class="prix">Prix : {{prix}}€</p>
+  </div>
+  <div class="buttons">
+    <button [routerLink]="'/pagevoyage/' + id" class="bluebutton">Voir détails</button>
+    <button (click)="openModal()" class="pinkbutton">Supprimer</button>
+  </div>
+</div>
+
+<div class="modal" [class.show]="isModalOpen" (click)="closeModal()">
+  <div class="" (click)="$event.stopPropagation()">
+    <h2>Confirmer la suppression</h2>
+    <p>Êtes-vous sûr de vouloir supprimer ce voyage ?</p>
+    <div class="">
+      <button (click)="confirmSuprimmer()" class="bluebutton">Oui, supprimer</button>
+      <button (click)="closeModal()" class="pinkbutton">Annuler</button>
+    </div>
+  </div>
+</div>

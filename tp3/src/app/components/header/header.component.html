@@ -1,0 +1,28 @@
+<header class="header">
+    <nav>
+        <div class="logo">
+            <img routerLink="home" routerLinkActive="active" src="assets/shinsekai-logo.png" alt="Logo">
+        </div>
+
+        <!-- Menu Desktop -->
+        <div class="menu_container" [class.hidden]="isMenuOpen">
+            <ul>
+                <li><a routerLink="voyages" routerLinkActive="active">Liste des voyages</a></li>
+                <li><a routerLink="generer-voyage" routerLinkActive="active">Génération de voyages</a></li>
+            </ul>
+        </div>
+
+        <!-- Bouton menu burger (Mobile) -->
+        <div class="menu-toggle" (click)="toggleMenu()">
+            ☰
+        </div>
+
+        <!-- Menu Mobile -->
+        <div class="mobile-menu" [class.show-menu]="isMenuOpen">
+            <ul>
+                <li><a routerLink="voyages" routerLinkActive="active">Liste des voyages</a></li>
+                <li><a routerLink="generer-voyage" routerLinkActive="active">Génération de voyages</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>

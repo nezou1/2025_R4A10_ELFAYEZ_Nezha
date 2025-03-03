@@ -1,0 +1,32 @@
+.liste_card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+.pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.pages button {
+  background-color: #0D5673;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pages button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pages button:hover:not(:disabled) {
+  background-color: #0D5673;
+}

@@ -1,0 +1,20 @@
+<div >
+  <h2>Explorez nos destinations exceptionnelles ✈️</h2>
+  <p class="sous-titre">Découvrez une sélection de voyages uniques pour vivre des expériences inoubliables.</p>
+</div>
+<div class="liste_card">
+  @for (card of listeVoyage ; track card.id){
+    <app-voyagecard [description]="card.description"
+                    [destination]="card.destination"
+                    [prix]="card.prix"
+                    [id]="card.id"
+                    (suprimmer)="suprimmerElement($event)">
+    </app-voyagecard>
+  }
+</div>
+
+<div class="pages">
+  <button (click)="previousPage()" [disabled]="currentPage === 0">Précédent</button>
+  <span>Page {{ currentPage + 1 }} sur {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage === totalPages - 1">Suivant</button>
+</div>
