@@ -23,26 +23,22 @@ export class GenererVoyageComponent implements OnInit {
       return;
     }
 
-    const randomIndexDestination = Math.floor(Math.random() * this.voyages.length);
-    const randomIndexDescription = Math.floor(Math.random() * this.voyages.length);
-    const randomIndexPrix = Math.floor(Math.random() * this.voyages.length);
+    const indexDest = Math.floor(Math.random() * this.voyages.length);
+    const indexDescr = Math.floor(Math.random() * this.voyages.length);
+    const indexPrix = Math.floor(Math.random() * this.voyages.length);
 
     this.voyageAleatoire = {
       id: Date.now().toString(),
-      destination: this.voyages[randomIndexDestination].destination,
-      description: this.voyages[randomIndexDescription].description,
-      prix: this.voyages[randomIndexPrix].prix
+      destination: this.voyages[indexDest].destination,
+      description: this.voyages[indexDescr].description,
+      prix: this.voyages[indexPrix].prix
     };
   }
 
-  validerAjout() {
+  ajout() {
     if (this.voyageAleatoire) {
       this.voyageService.ajouterVoyage(this.voyageAleatoire);
       this.voyageAleatoire = null;
     }
-  }
-
-  supprimerVoyage() {
-    this.voyageAleatoire = null;
   }
 }

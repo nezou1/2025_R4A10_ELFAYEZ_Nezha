@@ -1,16 +1,3 @@
-<!--- <div class="container mt-5">
-  <h1 class="fw-bold">Générer un Voyage Aléatoire</h1>
-  <button (click)="genererVoyage()" class="btn btn-primary mb-3">Générer un Voyage</button>
-
-  <div class="card p-3" [hidden]="!voyageAleatoire">  Utilisez [hidden] pour masquer l'élément 
-    <h2>Détails du Voyage</h2>
-    <p><strong>Destination:</strong> {{ voyageAleatoire?.destination }}</p>
-    <p><strong>Description:</strong> {{ voyageAleatoire?.description }}</p>
-    <p><strong>Prix:</strong> {{ voyageAleatoire?.prix }} €</p>
-    <button (click)="validerAjout()" class="btn btn-success">Ajouter à la Liste</button>
-  </div>
-</div> -->
-
 <div class="homepage">
   <div class="card">
     <div class="card-background">
@@ -28,6 +15,6 @@
     <p><strong>Destination:</strong> {{ voyageAleatoire?.destination }}</p>
     <p><strong>Description:</strong> {{ voyageAleatoire?.description }}</p>
     <p><strong>Prix:</strong> {{ voyageAleatoire?.prix }} €</p>
-    <button (click)="validerAjout()" class="btn btn-success">Ajouter à la Liste</button>
+    <button (click)="ajout()" class="btn btn-success">Ajouter à la Liste</button>
   </div>
 </div>

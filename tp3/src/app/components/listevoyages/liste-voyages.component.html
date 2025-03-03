@@ -8,13 +8,13 @@
                     [destination]="card.destination"
                     [prix]="card.prix"
                     [id]="card.id"
-                    (suprimmer)="suprimmerElement($event)">
+                    (suprimmer)="suprimmer($event)">
     </app-voyagecard>
   }
 </div>
 
 <div class="pages">
-  <button (click)="previousPage()" [disabled]="currentPage === 0">Précédent</button>
+  <button (click)="precedent()" [disabled]="currentPage === 0">Précédent</button>
   <span>Page {{ currentPage + 1 }} sur {{ totalPages }}</span>
-  <button (click)="nextPage()" [disabled]="currentPage === totalPages - 1">Suivant</button>
+  <button (click)="suivant()" [disabled]="currentPage === totalPages - 1">Suivant</button>
 </div>

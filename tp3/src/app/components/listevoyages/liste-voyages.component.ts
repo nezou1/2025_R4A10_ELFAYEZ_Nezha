@@ -24,28 +24,28 @@ export class VoyagesPageComponent implements OnInit {
     this.totalPages = Math.max(1,Math.ceil(this.voyageService.getVoyage().length / this.pageSize));
   }
 
-  suprimmerElement(id: number) {
+  suivant() {
+    if (this.currentPage < this.totalPages - 1) {
+      this.currentPage++;
+      this.update();
+    }
+  }
+
+  precedent() {
+    if (this.currentPage > 0) {
+      this.currentPage--;
+      this.update();
+    }
+  }
+
+  update() {
+    this.listeVoyage = this.voyageService.getVoyagesPage(this.currentPage, this.pageSize);
+  }
+
+  suprimmer(id: number) {
     this.voyageService.suprimmerVoyage(id);
     this.listeVoyage = this.voyageService.getVoyagesPage(this.currentPage, this.pageSize);
     this.totalPages = Math.max(1,Math.ceil(this.voyageService.getVoyage().length / this.pageSize));
-  }
-
-  nextPage() {
-    if (this.currentPage < this.totalPages - 1) {
-      this.currentPage++;
-      this.updateVoyages();
-    }
-  }
-
-  previousPage() {
-    if (this.currentPage > 0) {
-      this.currentPage--;
-      this.updateVoyages();
-    }
-  }
-
-  updateVoyages() {
-    this.listeVoyage = this.voyageService.getVoyagesPage(this.currentPage, this.pageSize);
   }
 
 }
