@@ -1,1 +1,28 @@
-<p>create-book-page works!</p>
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+    <label for="author">Author</label>
+    <input id="author" formControlName="author" />
+    <div *ngIf="bookForm.get('author')?.invalid && bookForm.get('author')?.touched">
+      Author must be between 5 and 50 characters.
+    </div>
+  
+    <label for="title">Title</label>
+    <input id="title" formControlName="title" />
+    <div *ngIf="bookForm.get('title')?.invalid && bookForm.get('title')?.touched">
+      Title must be between 2 and 35 characters.
+    </div>
+  
+    <label for="description">Description</label>
+    <textarea id="description" formControlName="description"></textarea>
+    <div *ngIf="bookForm.get('description')?.invalid && bookForm.get('description')?.touched">
+      Description must be between 10 and 255 characters.
+    </div>
+  
+    <label for="coverUrl">Cover URL</label>
+    <input id="coverUrl" formControlName="coverUrl" />
+    <div *ngIf="bookForm.get('coverUrl')?.invalid && bookForm.get('coverUrl')?.touched">
+      Cover URL is required.
+    </div>
+  
+    <button type="submit" [disabled]="bookForm.invalid">Add Book</button>
+  </form>
+  

@@ -1,0 +1,82 @@
+/* Style général du formulaire */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Espacement entre les champs du formulaire */
+  div {
+    margin-bottom: 15px;
+  }
+  
+  /* Style des labels */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Style des champs de saisie */
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Style des messages d'erreur */
+  .error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
+  /* Style spécifique pour chaque erreur */
+  .error p {
+    margin: 5px 0;
+  }
+  
+  /* Style du bouton de soumission */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style pour les champs invalides */
+  input.ng-invalid, textarea.ng-invalid {
+    border-color: red;
+  }
+  
+  input.ng-valid, textarea.ng-valid {
+    border-color: green;
+  }
+  
