@@ -1,10 +1,10 @@
-import { CurrencyPipe } from '@angular/common';
+import { CurrencyPipe, CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-single-pizza',
   standalone: true,
-  imports: [CurrencyPipe],
+  imports: [CurrencyPipe, CommonModule], // Ajout de CommonModule pour gérer les directives Angular
   templateUrl: './single-pizza.component.html',
   styleUrl: './single-pizza.component.css',
 })
@@ -20,6 +20,6 @@ export class SinglePizzaComponent {
   };
 
   get stars(): number[] {
-    return Array(this.pizza.rating).fill(0);
+    return Array.from({ length: this.pizza.rating }, () => 0); // Correction pour générer les étoiles correctement
   }
 }

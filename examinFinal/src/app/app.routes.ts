@@ -15,11 +15,11 @@ export const routes: Routes = [
     component: SinglePizzaComponent,
   },
   {
-    path: "/commander",
+    path: "commander",
     component: OrderPizzaPageComponent,
   },
   {
-    path: "/commandes",
+    path: "commandes",
     component: OrderListPageComponent,
   },
   {

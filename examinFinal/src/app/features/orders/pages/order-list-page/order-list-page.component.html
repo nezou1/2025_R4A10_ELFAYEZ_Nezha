@@ -4,7 +4,7 @@
   @if (orders.length) {
   <div>
     @for (order of orders; track $index) {
-    <app-order-card />
+    <app-order-card [order]="order" />
     }
   </div>
   } @else {
@@ -12,3 +12,4 @@
   }
 
 </div>
+
