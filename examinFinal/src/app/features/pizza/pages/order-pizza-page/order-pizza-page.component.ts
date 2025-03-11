@@ -31,12 +31,16 @@ export class OrderPizzaPageComponent implements OnInit {
   loadPizzas() {
     this.pizzaService.getPizzas().subscribe((pizzas: Pizza[]) => {
       this.pizzas = pizzas;
-      console.log("Pizzas disponibles :", this.pizzas);
+      console.log("✅ Pizzas disponibles :", this.pizzas);
     });
   }
 
   submitOrder() {
-    console.log("Commande validée :", this.order);
+    if (!this.order.pizza) {
+      console.log("❌ Veuillez sélectionner une pizza !");
+      return;
+    }
+    console.log("✅ Commande validée :", this.order);
     this.router.navigate(['/orders']); // Redirection après la commande
   }
 }
