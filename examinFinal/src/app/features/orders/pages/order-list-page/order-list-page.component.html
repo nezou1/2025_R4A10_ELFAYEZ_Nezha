@@ -4,7 +4,7 @@
   @if (orders.length) {
   <div>
     @for (order of orders; track $index) {
-    <app-order-card [order]="order" />
+        <app-order-card [order]="order" (deleteOrder)="onDelete($event)"></app-order-card>
     }
   </div>
   } @else {

@@ -9,17 +9,18 @@ export const routes: Routes = [
   {
     path: "",
     component: PizzaListPageComponent,
+    pathMatch: "full", // Assure que la page principale charge bien
   },
   {
     path: "pizza/:name",
     component: SinglePizzaComponent,
   },
   {
-    path: "commander",
+    path: "commander", // Suppression du "/" incorrect
     component: OrderPizzaPageComponent,
   },
   {
-    path: "commandes",
+    path: "commandes", // Suppression du "/" incorrect
     component: OrderListPageComponent,
   },
   {

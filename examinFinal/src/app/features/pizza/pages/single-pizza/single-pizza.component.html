@@ -1,25 +1,24 @@
-<div class="pizza-page">
+<div class="pizza-page" *ngIf="pizza">
   <h1 class="pizza-title">
     {{ pizza.name }}
-    <span class="pizza-rating">
-      <span *ngFor="let star of stars">&#9733;</span>
-    </span>
   </h1>
 
   <div class="pizza-image-container">
     <img [src]="pizza.image" [alt]="pizza.name" class="pizza-image" />
   </div>
 
-  <p class="pizza-description">{{ pizza.description }}</p>
+  <p class="pizza-description">{{ pizza?.description }}</p>
 
   <div class="pizza-ingredients">
-    <span *ngFor="let ingredient of pizza.ingredients" class="ingredient-badge">
-      {{ ingredient }}
-    </span>
+    @for (ingredient of pizza.ingredients ?? []; track ingredient) {
+      <span class="ingredient-badge">
+        {{ ingredient }}
+      </span>
+    }
   </div>
 
   <div class="pizza-footer">
-    <p class="pizza-price">{{ pizza.price | currency: 'EUR' }}</p>
-    <button class="order-button">Commander maintenant</button>
+    <p class="pizza-price">{{ pizza.price }}</p>
+    <button class="order-button" routerLink="/commander', pizza?.slug">Commander maintenant</button>
   </div>
 </div>

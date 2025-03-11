@@ -1,1 +1,29 @@
-<p>DOMINO'S VAINCRA</p>
+<h1>Commander une pizza</h1>
+
+<form #orderForm="ngForm" (ngSubmit)="submitOrder()">
+  <label for="pizza">Choisissez une pizza :</label>
+  <select id="pizza" name="pizza" [(ngModel)]="order.pizza" required>
+   <!---<option @for (let pizza of pizzas; track pizza.slug) [value]="pizza.slug">
+      {{ pizza.name }}
+    </option>-->
+  </select>
+
+  <label for="size">Taille :</label>
+  <select id="size" name="size" [(ngModel)]="order.size" required>
+    <option value="Medium">Medium</option>
+    <option value="Large">Large</option>
+    <option value="XXL">XXL</option>
+  </select>
+
+  <label for="payment">Moyen de paiement :</label>
+  <select id="payment" name="paymentMethod" [(ngModel)]="order.paymentMethod" required>
+    <option value="Cash">Espèces</option>
+    <option value="Card">Carte Bleue</option>
+    <option value="Bitcoin">Bitcoin</option>
+  </select>
+
+  <label for="email">Email :</label>
+  <input type="email" id="email" name="email" [(ngModel)]="order.email" required />
+
+  <button type="submit">Commander</button>
+</form>
